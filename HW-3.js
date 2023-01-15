@@ -46,7 +46,7 @@ function useRequest(url, callback) {
   const value = document.querySelector('input').value;
   
   btnNode.addEventListener('click', () => {
-   if (value >= 1 && value <= 10){  useRequest('https://picsum.photos/v2/list/?limit=5', displayResult);
+   if (value >= 1 && value <= 10){  useRequest('https://picsum.photos/v2/list/?limit=${input.value}', displayResult);
   }
     else {
      console.log('«число вне диапазона от 1 до 10»')         
