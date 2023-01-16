@@ -43,12 +43,12 @@ function useRequest(url, callback) {
     resultNode.innerHTML = cards;
   }
   
-  const value = document.querySelector('input').value;
+btnNode.addEventListener('click', () => {
+ let value = document.querySelector('input').value;
   
-  btnNode.addEventListener('click', () => {
-   if (value >= 1 && value <= 10){  useRequest('https://picsum.photos/v2/list/?limit=${input.value}', displayResult);
-  }
-    else {
-     console.log('«число вне диапазона от 1 до 10»')         
-  } 
-  })
+ if (value >= 1 && value <= 10){  useRequest(`https://picsum.photos/v2/list/?limit=${value}`, displayResult);
+}
+  else {
+   console.log('«число вне диапазона от 1 до 10»')         
+} 
+})
